@@ -1,20 +1,21 @@
 /*JavaScript*/
 
 
-
-// generate random number
+// create variables globally towards our application
 var randomNumber = "";
-var randomGemNumber = "";
-var yourScore = "";
-var yourWins = "";
-var yourLosses = "";
-
-
-// display random number
+var yourWins = 0;
+var yourLosses = 0;
+var yourScore = 0;
 
 function initializeGame() {
+    var yourScore = 0;
+
+    console.log("your score: " + yourScore)
     // generate random target number
-    $("#random-number").text(Math.floor((Math.random() * 50) + 10));
+    randomNumber = Math.floor((Math.random() * 50) + 10);
+    console.log(randomNumber);
+    displayRandomNumber = $("#random-number").text(randomNumber);
+
 
     // generate random gem values
     $("#gem-one").val(Math.floor((Math.random() * 10) + 2));
@@ -27,15 +28,47 @@ function initializeGame() {
     console.log("gem four value is: " + $("#gem-four").val());
 
 
-    $(".gem").on("click", function(){
-        theValue = parseInt($(this).val());
-        yourScore = parseInt(yourScore + theValue);
+}
+
+function playGame() {
+
+    // add random gen values to your score
+    $(".gem").on("click", function () {
+
+        console.log(randomNumber);
+        gemValue = parseInt($(this).val());
+        yourScore = parseInt(yourScore + gemValue);
         $("#your-score").text(yourScore);
+        console.log("your score in click: " + yourScore)
+
+        // if your score equals the random number, you win and the game resets
+        if (yourScore === randomNumber) {
+            alert("you win!");
+            yourWins++;
+            $("#your-wins").text(yourWins);
+            console.log("your wins: " + yourWins)
+            yourScore = 0;
+            // TODO: find a more efficient way of resetting the "yourScore." Why can't I get it to work in the gameSetup?
+            $("#your-score").text(yourScore);
+            gameSetup();
+            console.log("your wins after initialize: " + yourWins)
+        }
+
+        // if your score exceeds the random number, you lose and the game resets
+        if (yourScore > randomNumber) {
+            alert("you lost");
+            yourLosses++;
+            $("#your-losses").text(yourLosses);
+            console.log("your losses: " + yourLosses)
+            yourScore = 0;
+            $("#your-score").text(yourScore);
+            gameSetup();
+            console.log("your losses after intialize: " + yourLosses)
+
+        }
     });
 
 }
 
 initializeGame();
-
-
-
+playGame();
