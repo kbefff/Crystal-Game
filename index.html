@@ -1,14 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="assets/css/reset.css" type="text/css" rel="stylesheet">
-        <link href="assets/css/style.css" type="text/css" rel="stylesheet">
-    </head>
-    <body>
-    
-    </body>
-    <script src="assets/javascript/script.js"></script>
+
+<head>
+    <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- reset -->
+    <link href="assets/css/reset.css" type="text/css" rel="stylesheet">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- css -->
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- // four crystal buttons -->
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-3" id="title" align="center">
+                <h1>Crystal Game</h1>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6" align="center" id="random-number">#</div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-2" align="center">
+                <img src="assets/images/crystal.png" alt="crystal" class="gem img-thumbnail" id="gem-one">
+            </div>
+            <div class="col-md-2" align="center">
+                <img src="assets/images/emerald.png" alt="emerald" class="gem img-thumbnail" id="gem-two">
+            </div>
+            <div class="col-md-2" align="center">
+                <img src="assets/images/sapphire.png" alt="sapphire" class="gem img-thumbnail" id="gem-three">
+            </div>
+            <div class="col-md-2" align="center">
+                <img src="assets/images/ruby.png" alt="ruby" class="gem img-thumbnail" id="gem-four">
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-4" align="center">
+                <h3>Current Score:</h3>
+            </div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-md-4" align="center" id="current-score">#</div>
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="row justify-content-md-center">
+                <div class="col-md-8" align="center">
+                    <h6>Your wins:</h6>
+                </div>
+                <div class="col-md-8" align="center">
+                    <h6>Your losses:</h6>
+                </div>
+
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-8" align="center" id="your-wins">0</div>
+                <div class="col-md-8" align="center" id="your-losses">0</div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</body>
+<script src="assets/javascript/script.js"></script>
+
 </html>

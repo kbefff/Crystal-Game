@@ -1,0 +1,16 @@
+.row {
+    /* border: 2px solid red; */
+}
+
+body{
+    background-color: blueviolet;
+}
+
+#current-score,  #random-number  {
+    font-size: 48px;
+    border: 1px solid grey;
+    padding: 10px;
+    margin: 20px;
+    background-color: aquamarine;
+
+}
