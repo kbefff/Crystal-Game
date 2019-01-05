@@ -50,7 +50,7 @@ function playGame() {
             yourScore = 0;
             // TODO: find a more efficient way of resetting the "yourScore." Why can't I get it to work in the gameSetup?
             $("#your-score").text(yourScore);
-            gameSetup();
+            initializeGame();
             console.log("your wins after initialize: " + yourWins)
         }
 
@@ -62,7 +62,7 @@ function playGame() {
             console.log("your losses: " + yourLosses)
             yourScore = 0;
             $("#your-score").text(yourScore);
-            gameSetup();
+            initializeGame();
             console.log("your losses after intialize: " + yourLosses)
 
         }
