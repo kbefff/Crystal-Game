@@ -12,19 +12,19 @@ function initializeGame() {
 
     console.log("your score: " + yourScore)
     // generate random target number
-    randomNumber = Math.floor((Math.random() * 50) + 10);
+    randomNumber = Math.floor((Math.random() * 120) + 19);
     console.log(randomNumber);
     displayRandomNumber = $("#random-number").text(randomNumber);
 
 
     // generate random gem values
-    $("#gem-one").val(Math.floor((Math.random() * 10) + 2));
+    $("#gem-one").val(Math.floor((Math.random() * 12) + 1));
     console.log("gem one value is: " + $("#gem-one").val());
-    $("#gem-two").val(Math.floor((Math.random() * 10) + 2));
+    $("#gem-two").val(Math.floor((Math.random() * 12) + 1));
     console.log("gem two value is: " + $("#gem-two").val());
-    $("#gem-three").val(Math.floor((Math.random() * 10) + 2));
+    $("#gem-three").val(Math.floor((Math.random() * 12) + 1));
     console.log("gem three value is: " + $("#gem-three").val());
-    $("#gem-four").val(Math.floor((Math.random() * 10) + 2));
+    $("#gem-four").val(Math.floor((Math.random() * 12) + 1));
     console.log("gem four value is: " + $("#gem-four").val());
 
 
